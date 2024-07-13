@@ -21,4 +21,4 @@ This is the total planning of movie application like netflix.
 
 # Technology and Tools used in this project
 
-[(https://skillicons.dev/icons?i=html,css,tailwind,js,react,redux,jest,firebase,git,github,theme=light&perline=8)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=html,css,tailwind,js,react,redux,jest,firebase,git,github,theme=light&perline=8)](https://skillicons.dev)
