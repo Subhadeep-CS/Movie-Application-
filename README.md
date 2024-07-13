@@ -3,19 +3,19 @@
 # Pages-wise planing
 
 - Authentication Page
-    -Login/Sigup page(Using firebase)
-        -Login/Signup Form
-        -Succesful login/sign up redirect to Browse Page
+    - Login/Sigup page(Using firebase)
+        - Login/Signup Form
+        - Succesful login/sign up redirect to Browse Page
 - Browse Page
-    -Header
-    -Main Movie
-        -Trailor in Background
-        -Title and Description of movie
-        -Movie and Suggestion
-            -Movie List
+    - Header
+    - Main Movie
+        - Trailor in Background
+        - Title and Description of movie
+        - Movie and Suggestion
+            - Movie List
 - Serching
-    -Search Bar
-    -Movie suggestion according using openAI api.
+    - Search Bar
+    - Movie suggestion according using openAI api.
 
 This is the total planning of movie application like netflix.
 
