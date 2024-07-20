@@ -1,9 +1,8 @@
-import './App.css';
-
-function App() {
+import AppLayout from "./Layout/AppLayout";
+const App=()=> {
   return (
     <div className='App'>
-      <p className='w-7'>Hello Movie application</p>
+      <AppLayout/>
     </div>
   );
 }
