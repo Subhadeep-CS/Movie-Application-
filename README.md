@@ -7,6 +7,7 @@
         - Login/Signup Form
             -From vallidation
             -useFormik and yup
+            -authetiication using firebase
         - Succesful login/sign up redirect to Browse Page
 - Browse Page
     - Header

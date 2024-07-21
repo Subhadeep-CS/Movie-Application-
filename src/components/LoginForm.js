@@ -12,8 +12,12 @@ const LoginForm = () => {
     validationSchema: isSignInForm ? signinSchema : signupSchema,
     enableReinitialize: true,
     onSubmit: (values,action) => {
-      console.log(values);
-      action.resetForm();
+      if(isSignInForm){
+        //sign in logic goes here
+      }
+      else{
+        //signup logic goes here
+      }
     },
   });
 
