@@ -5,6 +5,8 @@
 - Authentication Page
     - Login/Sigup page(Using firebase)
         - Login/Signup Form
+            -From vallidation
+            -useFormik and yup
         - Succesful login/sign up redirect to Browse Page
 - Browse Page
     - Header
