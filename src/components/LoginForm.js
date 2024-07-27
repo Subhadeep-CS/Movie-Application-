@@ -4,10 +4,10 @@ import { signinSchema, signupSchema } from "../utils/formValidationSchema";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/firebase";
 import { toast,Bounce } from "react-toastify";
-
+import { useNavigate } from "react-router-dom";
 const LoginForm = () => {
   const [isSignInForm, setIsSignInForm] = useState(true);
-
+  const navigate=useNavigate();
   const { handleChange, handleBlur, handleSubmit, touched, values, errors } =
     useFormik({
       initialValues: isSignInForm
@@ -25,6 +25,7 @@ const LoginForm = () => {
               const user = userCredential.user;
               console.log(user);
               toast.success("Login Successfully");
+              navigate("/browse")
             })
             .catch((error) => {
               const errorCode = error.code;
@@ -43,7 +44,8 @@ const LoginForm = () => {
               console.log(user);
               const { providerData } = user;
               toast.success(`${providerData.email} registered successfully`);
-            })
+              isSignInForm(true);
+;            })
             .catch((error) => {
               const errorCode = error.code;
               const errorMessage = error.message;
