@@ -8,7 +8,7 @@ import { useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser, removeUser } from "../redux/slice/userSlice";
-
+import Header from "./Header";
 const AppLayout = () => {
   const dispatch=useDispatch();
   const appRouter = createBrowserRouter([
@@ -51,6 +51,7 @@ const AppLayout = () => {
         theme="dark"
         transition={Bounce}
       />
+      <Header />
       <RouterProvider router={appRouter}></RouterProvider>
     </div>
   );

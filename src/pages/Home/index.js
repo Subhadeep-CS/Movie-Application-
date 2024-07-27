@@ -5,7 +5,6 @@ import LoginForm from "../../components/LoginForm";
 const Home = () => {
   return (
     <div className="relative w-full h-full min-h-screen overflow-hidden">
-      <Header />
       <div className="absolute inset-0 w-full h-full overflow-hidden">
         <img
           src={BackgroundImage}

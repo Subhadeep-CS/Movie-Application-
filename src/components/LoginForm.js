@@ -44,12 +44,12 @@ const LoginForm = () => {
               console.log(user);
               const { providerData } = user;
               toast.success(`${providerData.email} registered successfully`);
-              isSignInForm(true);
+              setIsSignInForm(true);
 ;            })
             .catch((error) => {
               const errorCode = error.code;
               const errorMessage = error.message;
-              console.log(errorCode + "" + errorMessage);
+              toast.error(errorMessage);
             });
         }
         action.resetForm();
