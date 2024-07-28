@@ -1,7 +1,21 @@
 import { useState } from "react";
+import { auth } from "../config/firebase";
+import { signOut } from "firebase/auth";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 const ProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate=useNavigate();
+  //signout logic
+  const handleSignOut=()=>{
+    signOut(auth).then(() => {
+      toast.success("Sign Out Successfull");
+      navigate('/');
+    }).catch((error) => {
+      // An error happened.
+      toast.error(error.errorMessage);
+    });
+  }
   return (
     <div className="relative inline-block text-left">
       <div>
@@ -39,7 +53,7 @@ const ProfileDropdown = () => {
           tabIndex="-1"
         >
           <div className="py-1" role="none">
-            <a
+            {/* <a
               href="#"
               className="block px-4 py-2 text-sm text-gray-700"
               role="menuitem"
@@ -65,18 +79,16 @@ const ProfileDropdown = () => {
               id="menu-item-2"
             >
               License
-            </a>
-            <form method="POST" action="#" role="none">
+            </a> */}
               <button
-                type="submit"
                 className="block w-full px-4 py-2 text-left text-sm text-gray-700"
                 role="menuitem"
                 tabIndex="-1"
                 id="menu-item-3"
+                onClick={handleSignOut}
               >
                 Sign out
               </button>
-            </form>
           </div>
         </div>
       )}
