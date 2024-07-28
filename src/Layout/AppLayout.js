@@ -14,11 +14,21 @@ const AppLayout = () => {
   const appRouter = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: (
+        <>
+          <Header/>
+          <Home />
+        </>
+      ),
     },
     {
       path: "/browse",
-      element: <Browse />,
+      element:(
+        <>
+          <Header/>
+          <Browse />
+        </>
+      ),
     },
   ]);
 
@@ -27,8 +37,8 @@ const AppLayout = () => {
     onAuthStateChanged(auth,(user)=>{
       if(user){
         //user signin
-        const {uid,email,displayName}=user;
-        dispatch(addUser({uid,email,displayName}));
+        const {uid,email,displayName,photoURL}=user;
+        dispatch(addUser({uid,email,displayName,photoURL}));
       } 
       else{
         //user signout
@@ -51,7 +61,6 @@ const AppLayout = () => {
         theme="dark"
         transition={Bounce}
       />
-      <Header />
       <RouterProvider router={appRouter}></RouterProvider>
     </div>
   );
