@@ -30,9 +30,7 @@ const LoginForm = () => {
             .then((userCredential) => {
               // Signed in
               const user = userCredential.user;
-              console.log(user);
               toast.success("Login Successfully");
-              navigate("/browse");
             })
             .catch((error) => {
               const errorCode = error.code;
@@ -53,10 +51,10 @@ const LoginForm = () => {
                 photoURL: "https://example.com/jane-q-user/profile.jpg",
               })
                 .then(() => {
-                  const { uid, email, displayName, photoURL } = auth.currentUser;
+                  const { uid, email, displayName, photoURL } =
+                    auth.currentUser;
                   dispatch(addUser({ uid, email, displayName, photoURL }));
                   toast.success(`${name} signup successfully `);
-                  navigate("/browse");
                 })
                 .catch((error) => {
                   toast.error(error.errorMessage);
