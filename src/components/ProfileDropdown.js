@@ -2,10 +2,8 @@ import { useState } from "react";
 import { auth } from "../config/firebase";
 import { signOut } from "firebase/auth";
 import { toast } from "react-toastify";
-import { useNavigate } from "react-router-dom";
 const ProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
   //signout logic
   const handleSignOut = () => {
     signOut(auth)

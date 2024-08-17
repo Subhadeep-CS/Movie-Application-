@@ -15,7 +15,7 @@ const Header = () => {
   const navigate = useNavigate();
   //onAuthState change called only once app level
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unSubscribed = onAuthStateChanged(auth, (user) => {
       if (user) {
         //user signin
         const { uid, email, displayName, photoURL } = user;
@@ -26,6 +26,8 @@ const Header = () => {
         dispatch(removeUser());
         navigate("/");
       }
+      //unsubscribed when component unmount
+      return () => unSubscribed();
     });
   }, []);
 
