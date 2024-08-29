@@ -26,7 +26,7 @@ const Header = () => {
         dispatch(removeUser());
         navigate("/");
       }
-      //unsubscribed when component unmount
+      //unsubscribed onAuthStateChanged event  when component unmount
       return () => unSubscribed();
     });
   }, []);
