@@ -4,6 +4,7 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, Bounce } from "react-toastify";
 import Header from "./Header";
+import Error from "../pages/Error";
 const AppLayout = () => {
   const appRouter = createBrowserRouter([
     {
@@ -14,6 +15,7 @@ const AppLayout = () => {
           <Home />
         </>
       ),
+      errorElement: <Error />,
     },
     {
       path: "/browse",
@@ -23,6 +25,7 @@ const AppLayout = () => {
           <Browse />
         </>
       ),
+      errorElement: <Error />,
     },
   ]);
 
