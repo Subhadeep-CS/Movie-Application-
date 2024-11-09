@@ -1,5 +1,15 @@
 const MovieListContainer = () => {
-  return <div>MovieListContainer</div>;
+  return (
+    <div>
+      {/* 
+      Movie List
+        -Trending 
+          -Movie Card
+        -Popular 
+        -Now Playing
+    */}
+    </div>
+  );
 };
 
 export default MovieListContainer;

@@ -76,7 +76,7 @@ const LoginForm = () => {
       className="relative flex justify-center items-center min-h-screen"
     >
       <form
-        className="p-8 w-full max-w-md bg-black bg-opacity-80 text-white rounded-md"
+        className="p-8 w-96 max-w-md bg-black bg-opacity-80 text-white rounded-md"
         onSubmit={handleSubmit}
       >
         <h1 className="font-bold text-3xl py-4">
