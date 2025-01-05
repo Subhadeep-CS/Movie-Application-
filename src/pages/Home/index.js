@@ -1,4 +1,3 @@
-import Header from "../../Layout/Header";
 import BackgroundImage from "../../assets/images/background-image.jpg";
 import LoginForm from "../../components/LoginForm";
 
