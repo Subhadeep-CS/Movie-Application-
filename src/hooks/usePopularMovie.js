@@ -6,15 +6,16 @@
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { API_OPTIONS } from "../config/api";
-import { addNowPlayingMovies } from "../redux/slice/moviesSlice";
-const useNowPlayingMovies = () => {
+import { addPopularMovies } from "../redux/slice/moviesSlice";
+
+const usePopularMovies = () => {
   const dispatch = useDispatch();
 
   // fetch data from TMDB api AND update the store
-  const getNowPlayingMovies = async () => {
+  const getNowPopularMovies = async () => {
     try {
       const response = await fetch(
-        `${process.env.REACT_APP_API_BASE_URL}/now_playing?page=1`,
+        `${process.env.REACT_APP_API_BASE_URL}/popular?page=1`,
         API_OPTIONS
       );
       if (!response.ok) {
@@ -22,7 +23,7 @@ const useNowPlayingMovies = () => {
       }
       const data = await response.json();
       console.log(data.results);
-      dispatch(addNowPlayingMovies(data.results));
+      dispatch(addPopularMovies(data.results));
     } catch (error) {
       console.error(`Failed to fetch ${error}`);
     }
@@ -30,8 +31,8 @@ const useNowPlayingMovies = () => {
 
   //API calling
   useEffect(() => {
-    getNowPlayingMovies();
+    getNowPopularMovies();
   }, []);
 };
 
-export default useNowPlayingMovies;
+export default usePopularMovies;

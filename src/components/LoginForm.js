@@ -73,7 +73,7 @@ const LoginForm = () => {
   return (
     <div
       id="loginForm"
-      className="relative flex justify-center items-center min-h-screen"
+      className="relative flex justify-center items-center min-h-screen min-w-48"
     >
       <form
         className="p-8 w-96 max-w-md bg-black bg-opacity-80 text-white rounded-md"

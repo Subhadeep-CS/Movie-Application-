@@ -8,7 +8,7 @@ const useMovieTrailerVideo = (movieId) => {
   //fetch the movie video
   const getMovieTrailer = async () => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${movieId}/videos`,
+      `${process.env.REACT_APP_API_BASE_URL}/${movieId}/videos`,
       API_OPTIONS
     );
     const movieVideoData = await response.json();

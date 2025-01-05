@@ -5,7 +5,6 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, Bounce } from "react-toastify";
 import Header from "./Header";
 import Error from "../pages/Error";
-import { Scrollbar } from "react-scrollbars-custom";
 const AppLayout = () => {
   const appRouter = createBrowserRouter([
     {

@@ -1,7 +1,7 @@
 import AppLayout from "./Layout/AppLayout";
 const App = () => {
   return (
-    <div className="App">
+    <div className="w-full overflow-hidden">
       <AppLayout />
     </div>
   );
